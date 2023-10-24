@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import AddTodo from './Components/AddTodo';
 import EditTodo from './Components/EditTodo';
 import FilterTodo from './Components/FilterTodo';
-import TodoItem from './Components/TodoItem';
 import TodoList from './Components/TodoList';
 
 export interface TodoInterface {
