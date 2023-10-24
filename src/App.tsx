@@ -10,7 +10,7 @@ import TodoList from './Components/TodoList';
 export interface TodoInterface {
   id: string;
   task: string;
-  complete: boolean;
+  completed: boolean;
 }
 
 function App() {
