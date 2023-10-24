@@ -4,6 +4,9 @@ import AddTodo from './Components/AddTodo';
 import EditTodo from './Components/EditTodo';
 import FilterTodo from './Components/FilterTodo';
 import TodoList from './Components/TodoList';
+import type { RootState } from './Redux/Store';
+import { UseSelector } from 'react-redux/es/hooks/useSelector';
+
 
 export interface TodoInterface {
   id: string;
