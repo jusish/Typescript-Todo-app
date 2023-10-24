@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AddTodo from './Components/AddTodo';
@@ -7,24 +7,29 @@ import FilterTodo from './Components/FilterTodo';
 import TodoItem from './Components/TodoItem';
 import TodoList from './Components/TodoList';
 
+export interface TodoInterface {
+  id: string;
+  task: string;
+  complete: boolean;
+}
+
 function App() {
+  const [ editTodo, setEditTodo] = useState<TodoInterface | null>(null)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='app'>
+      <div className='app_wrapper'>
+        <div className='app_header'>
+          <h1 className='app_title'>
+            Todo App
+          </h1>
+        </div>
+        <div className='app_inputs-box'>
+          {editTodo?.id ? <EditTodo /> : <AddTodo />}
+          <FilterTodo />
+        </div>
+        <TodoList />
+      </div>
+    </main>
   );
 }
 
