@@ -1,6 +1,20 @@
 import React from 'react'
+import { TodoInterface } from '../App'
 
-const TodoItem = () => {
+type TodoItemProps = {
+  todo: TodoInterface;
+  editTodo: TodoInterface | null;
+  getEditTodo: (editTodo: TodoInterface) => void;
+  setEditTodo: (editTodo: TodoInterface) =>void;
+}
+
+const TodoItem = ({
+  todo,
+  editTodo,
+  getEditTodo,
+  setEditTodo,
+
+} : TodoItemProps) => {
   return (
     <div>
       Todo item
