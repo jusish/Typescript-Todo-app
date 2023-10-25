@@ -16,9 +16,9 @@ const TodoItem = ({
 
 } : TodoItemProps) => {
   return (
-    <div>
+    <li>
       Todo item
-    </div>
+    </li>
   )
 }
 

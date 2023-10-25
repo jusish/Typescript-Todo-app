@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const FilterTodo = () => {
-  return (
-    <div>
-      Filter Todo
-    </div>
-  )
-}
+type FilterTodoProps = {
+  getTodoFilterValue: (filterValue: string) => void;
+};
 
-export default FilterTodo
+const FilterTodo = ({getTodoFilterValue}:FilterTodoProps) => {
+  return <div>Filter Todo</div>;
+};
+
+export default FilterTodo;

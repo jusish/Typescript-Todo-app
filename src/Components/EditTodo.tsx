@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import { TodoInterface } from "../App";
 
-const EditTodo = () => {
-  return (
-    <div>
-      edit todo
-    </div>
-  )
-}
+type EditTodoProps = {
+  editTodo: TodoInterface;
+  setEditTodo: (editTodo: TodoInterface) => void;
+};
 
-export default EditTodo
+const EditTodo = ({editTodo, setEditTodo} : EditTodoProps) => {
+  return <div>edit todo</div>;
+};
+
+export default EditTodo;
