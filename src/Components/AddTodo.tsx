@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-import { addTodo } from '../Redux/todo';
+import { addTodo } from "../Redux/todo";
 
 const AddTodo = () => {
   const dispatch = useDispatch();
   const [task, setTask] = useState("");
   const [error, setError] = useState("");
 
-/** 
-this function prevents default behaviour page refresh on form submit and sets error to state if length of characters either less than 5 or greater than 50. 
-Else if there'r no errors than it dispatches action to the reducer to add new task with unique id. And sets input to empty ""
-*/
   const handleAddTaskSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (task.trim().length < 5) {
@@ -24,9 +20,6 @@ Else if there'r no errors than it dispatches action to the reducer to add new ta
     }
   };
 
-/**
- this function removes error from the state if character length is greater than 5 and less than 50
-*/
   const handleUpdateTodoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTask(e.target.value);
     if (task.trim().length > 5 && task.trim().length < 50) {
