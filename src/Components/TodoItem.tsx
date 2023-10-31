@@ -54,7 +54,7 @@ const TodoItem = ({
         />
         {todo.task}
       </label>
-      <div className="todo-list_btns-box">
+      <div className="todo-list_btns-box">  
         <button
           onClick={handleGetEditTodoClick}
           className="todo-list_btn todo-list_edit-btn"
